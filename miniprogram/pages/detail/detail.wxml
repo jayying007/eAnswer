@@ -1,0 +1,38 @@
+<!--pages/detail/detail.wxml-->
+<view class='background'>
+  <view class='question'>
+    <view style='display:flex' class='space'>
+      <text style='font-weight:bold'>关键词:</text>
+      <block wx:key="{{item}}" wx:for="{{title}}">
+          <view class="'bg-{{index}} bg">{{item}}</view>
+      </block>
+    </view>
+    <view style='color:#ccc' class='space'>{{time}}</view>
+    <view class='space'>{{content}}</view>
+  </view>
+  <!-- 专家评论区 -->
+  <view class='commentArea'>
+    <text style='font-weight:bold' class='space'>专家评论({{commentA.length}})</text>
+    <block wx:key="{{item}}" wx:for="{{commentA}}">
+      <view style='color:#ccc' class='space'>{{item.time}}</view>
+      <view class='space comment-content'>{{item.content}}</view>
+    </block>
+  </view>
+  <!-- 普通用户区 -->
+  <view class='commentArea'>
+    <text style='font-weight:bold' class='space'>其他评论({{commentB.length}})</text>
+    <block wx:key="{{item}}" wx:for="{{commentB}}">
+      <view style='color:#ccc' class='space'>{{item.time}}</view>
+      <view class='space comment-content'>{{item.content}}</view>
+    </block>
+  </view>
+  <!-- 填充悬浮层缺陷 -->
+  <view style='height:100rpx;background-color:#fff'></view>
+  <!-- 评论悬浮层 -->
+  <form bindsubmit='addComment'>
+    <view class='comment'>
+      <textarea bindinput='commentInput' value='{{comment}}' fixed='true' name="textarea" show-confirm-bar='false' auto-height='true' class="{{commentLayer?'comment-input-focus':'comment-input-nofocus'}}" bindfocus="commentFocus" bindblur='commentNofocus' bindinput='changeValue' placeholder='添加新回复'></textarea>
+      <button form-type='submit' class='comment-btn' disabled="{{hasValue?false:true}}">发表</button>
+    </view>
+  </form>
+</view>

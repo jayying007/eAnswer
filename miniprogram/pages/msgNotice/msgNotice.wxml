@@ -1,0 +1,13 @@
+<!--pages/msgNotice/msgNotice.wxml-->
+<!-- 评论区 -->
+<view style='background-color:#ddd'>
+  <view class='tip'>单击进入详情页</view>
+  <block wx:key="{{item}}" wx:for="{{comment}}">
+    <view class='card' bindlongpress='delete' data-index='{{index}}'>
+        <!-- 回复的内容 -->
+        <text style='font-weight:bold'>新的评论:</text> 
+        <view bindtap='detail' data-index='{{index}}'>{{item.content}}</view>
+    </view>
+  </block> 
+</view>
+<view class='nomore'>没有更多内容了</view>

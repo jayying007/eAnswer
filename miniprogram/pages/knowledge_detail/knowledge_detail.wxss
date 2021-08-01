@@ -1,0 +1,16 @@
+/* miniprogram/pages/knowledge_detail/knowledge_detail.wxss */
+.card{
+  background-color: #fff;
+  margin-bottom: 50rpx;
+}
+.title{
+  background-color: #b3e5fc;
+  padding: 20rpx;
+  width: 200rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+}
+.content{
+  padding: 20rpx;
+  color: gray;
+}

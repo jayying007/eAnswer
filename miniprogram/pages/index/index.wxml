@@ -1,0 +1,68 @@
+<!--pages/index/index.wxml-->
+<view style='background:#ddd; height:100%;'>
+	<!-- 搜索框和筛选 -->
+	<view class='search'>
+    <view class='input'>
+      <input placeholder='通过右侧按钮筛选关键词' style='padding-left:30rpx;' disabled='true' class='input-in' value="{{searchKey}}" />
+    </view>
+    <view bindtap='filter' class='filter'>
+      <image src='../../imgs/filter.png' class='filter-png'></image>
+    </view>
+  </view>
+  <!-- 填充悬浮造成的影响 -->
+  <view style='height:120rpx;'></view>
+  <!-- 筛选悬浮层 -->
+  <scroll-view  scroll-y class='filter-float' hidden='{{filterLayer}}'>
+    <!-- 筛选评论 -->
+    <view>
+      <view class='title'>评论筛选</view>
+      <view style='display:flex;'>
+        <view bindtap='selAll' class="{{searchAll?'comment-choose':'comment-nochoose'}}">查看全部评论</view>
+        <view bindtap='sel' class="{{!searchAll?'comment-choose':'comment-nochoose'}}">包含专家评论</view>
+      </view>
+    </view>
+    <view class='line'></view>
+    <!-- 提供筛选标签 -->
+    <view class='title'>症状筛选
+      <text class='tip'>最多可选5个标签</text>
+      <text hidden="{{selectItem?false:true}}" bindtap='clearAllItem' class='tip' style='float:right;padding: 20rpx 20rpx;'>清除所有</text>
+    </view>
+    <block wx:key="{{item}}" wx:for="{{labels}}" wx:for-index='first'>
+      <view class='title-small'>{{item.kind}}</view>
+      <view style='display:flex;flex-wrap:wrap;'>
+        <block wx:key="{{item}}" wx:for="{{item.content}}" wx:for-index='second'>
+         <view bindtap='clickItem' data-first='{{first}}' data-second='{{second}}' class="{{item.choose?'category-choose':'category-nochoose'}}">{{item.name}}</view>
+        </block>
+      </view>
+      <view class='line'></view>
+    </block>
+    
+    <view class='btn-group'>
+      <button class='btn-cancel' bindtap='filter'>取消</button>
+      <button class='btn-submit' bindtap='filterItem'>确定</button>
+    </view>
+  </scroll-view>
+  <!-- 内容 -->
+  <block wx:key="{{item}}" wx:for="{{question}}">
+    <view class='card' bindtap='detail' data-item='{{item}}'>
+      <view style='display:flex'>
+        <text style='font-weight:bold'>关键词:</text>
+        <block wx:key="{{item}}" wx:for="{{item.keyword}}">
+            <view class="'bg-{{index}} bg">{{item}}</view>
+        </block>
+      </view>
+      <view class='content'>{{item.content}}</view>
+    </view>
+  </block>
+  <!--  纵向多功能按钮 -->
+  <view class="grace-popover-menu">
+    <!-- 文字形式 请自行添加点击事件 bindtap -->
+    <view class="item grace-iconfont" style="font-size:14px;background-color:#4fc3f7" hidden="{{popmenuShow}}" 
+     bindtap="addQuestion">我要提问</view>
+    <!-- <view class="item grace-iconfont" style="font-size:14px;background-color:#03a9f4" hidden="{{popmenuShow}}" 
+     bindtap="askAI">智能问诊</view> -->
+    <!-- 主按钮 -->
+    <view class="item grace-iconfont icon-write" bindtap="showmenu" style="background:#0288d1;"></view>
+  </view>
+</view>
+<view class='nomore'>没有更多内容了</view>

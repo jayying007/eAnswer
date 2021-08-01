@@ -1,0 +1,20 @@
+/* miniprogram/pages/records/records.wxss */
+.tip{
+  text-align: center;
+  color: #bbb;
+  padding: 30rpx;
+}
+
+.grace-common-mt{margin-top:15px;}
+
+/* 普通列表 */
+.grace-list{width:100%; border-top:1px solid #E9E9E9; border-bottom:1px solid #E9E9E9; background:#FFF; padding:5px 0;}
+.grace-list .items{width:100%; display:flex; flex-wrap:nowrap;  position:relative;}
+.grace-list .items .icons{width:20px; height:20px; line-height:20px; text-align:center; margin:18px 0 18px 18px; flex-shrink:0;}
+.grace-list .items .icons image{width:20px; height:20px;}
+.grace-list .items .title{width:100%; margin-left:15px; padding:18px 30px 18px 0; font-size:16px; height:20px; line-height:20px; overflow:hidden; border-bottom:1px solid #E9E9E9; white-space:nowrap; text-overflow:ellipsis;}
+.grace-list .title text{font-size:13px; color:#B2B2B2; margin-left:10px; float:right;}
+.grace-list > .items:last-child .title {border:none !important;}
+.grace-list .items .arrow-right{font-family:"grace-iconfont" !important; font-size:36rpx; font-style:normal; height:56px; line-height:56px; text-align:center; width:30px; position:absolute; z-index:1; right:0; top:0;}
+.grace-list .items .arrow-right:before{content:"\e601"; color:#B2B2B2;}
+.grace-list .items .icon-r{position:absolute; z-index:1; right:35px; top:0px;}

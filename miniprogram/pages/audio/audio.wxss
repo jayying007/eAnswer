@@ -1,0 +1,56 @@
+/* miniprogram/pages/audio/audio.wxss */
+
+
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #4A708B;
+}
+
+.button-area{
+    margin-top: 150px
+}
+
+.button-circle{
+  border-radius: 100%;
+}
+
+.start{
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  padding: 35px;
+  background: rgb(14, 177, 14);
+  color: white
+}
+
+.start:active{
+  background: rgb(9, 109, 9);
+}
+
+.end{
+  float: left;
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  margin-left: 90px;
+  padding: 35px;
+  background:rgb(165, 15, 72);
+  color: white
+}
+
+.end:active{
+  background: rgb(126, 5, 5);
+}
+
+.cancel{
+  width: 60px;
+  height: 60px;
+  margin-top: 70px;
+  margin-left: 170px;
+  padding-top: 9px;
+  font-size: 15px;
+}
+
+

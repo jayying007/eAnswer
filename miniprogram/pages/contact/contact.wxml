@@ -1,0 +1,12 @@
+<!--pages/contact/contact.wxml-->
+<view style='background-color:#eee;'>
+  <view class='tip'>可通过一键拨打功能进行拨打</view>
+  <form bindsubmit='submit'>
+    <view style='margin-top:20rpx;margin-bottom:20rpx;'>
+      <input bindinput='changeValue' type='number' name="phone" style='padding-left:30rpx; height:100rpx; background-color:#fff;' placeholder='号码设置'></input>
+    </view>
+    <view>
+      <button form-type='submit' class='btn-submit' disabled='{{hasValue?false:true}}'>完成设置</button>
+    </view>
+  </form> 
+</view>

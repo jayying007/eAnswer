@@ -1,0 +1,10 @@
+<!--miniprogram/pages/audioList/audioList.wxml-->
+<view style='background-color:#ddd'>
+  <view class='tip'>单击进行播放  长按删除</view>
+  <block wx:key="{{item}}" wx:for="{{audioFile}}">
+    <view class='card' bindlongpress='delete' bindtap='play' data-item='{{item}}'>
+      <view>{{item.filename}}</view>
+    </view>
+  </block>
+</view>
+<view class='nomore'>没有更多内容了</view>

@@ -1,0 +1,16 @@
+<!--pages/applyExpert/applyExpert.wxml-->
+<view class='background'>
+  <form bindsubmit='formSubmit'>
+    <textarea bindinput='changeValue' placeholder='请做简要的自我描述' name="describe" class='describe'></textarea>
+    <view class='imgArea'>
+      <view class='imgBtn' bindtap='chooseImg'>
+        <view style='font-size:100rpx;'>+</view>
+        <view>选取证件</view>
+      </view>
+      <image src='{{filepath}}' hidden="{{filepath==''?true:false}}"></image>
+    </view>
+    <view>
+      <button form-type='submit' class='btn-submit' disabled="{{(hasValue&&filepath!='')?false:true}}">完成设置</button>
+    </view>
+  </form>
+</view>

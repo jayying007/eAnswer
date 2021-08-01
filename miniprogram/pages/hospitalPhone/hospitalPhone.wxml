@@ -1,0 +1,26 @@
+<!--pages/hospitalPhone/hospitalPhone.wxml-->
+<view style='background-color:#fff'>
+  <view class='tip'>
+    <text style='font-weight: bold;'>紧急求医的要点可参考以下：\n</text>
+    <text>如实说明情况，不要夸大其词\n</text>
+    <text>说明具体时间，地点(如显著建筑)\n</text>
+    <text>说明自身姓名，联系方式\n</text>
+    <text>若无特殊情况，请在原地等候</text>
+  </view>
+  <block wx:key="{{index}}" wx:for="{{tels}}">
+    <view class='card'>
+      <view class='name'>
+        <view>
+        <image style='width:60rpx;height:60rpx;' src='../../imgs/hospital.png'></image>
+        </view>
+        <view>{{item.name}}</view>
+      </view>
+      <view class='phone'>
+        <view style='width:90%;'>{{item.phone}}</view>
+        <view style='float:right;' bindtap='call' data-index='{{index}}'>
+          <image style='width:60rpx;height:60rpx;' src='../../imgs/phonecall.png'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

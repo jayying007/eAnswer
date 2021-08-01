@@ -1,0 +1,28 @@
+/* pages/hospitalPhone/hospitalPhone.wxss */
+.tip{
+  text-align: center;
+  background-color: #eee;
+  padding: 50rpx;
+}
+.card{
+  background-color: #fff;
+  height: 200rpx;
+  margin: 30rpx 30rpx;
+}
+.name{
+  font-weight: bold;
+  height: 60rpx;
+  background-color: #e1f5fe;
+  padding: 20rpx 10rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  display: flex;
+}
+.phone{
+  background-color: #eee;
+  height: 60rpx;
+  padding: 20rpx 10rpx;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  display: flex;
+}

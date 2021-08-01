@@ -1,0 +1,27 @@
+<!-- 提供筛选标签 -->
+<view>
+  <view class='title'>症状筛选
+    <text class='tip'>最多可选5个标签</text>
+    <text hidden="{{selectItem?false:true}}" bindtap='clearAllItem' class='tip' style='float:right;padding: 20rpx 20rpx;'>清除所有</text>
+  </view>
+  <block wx:key="{{item}}" wx:for="{{labels}}" wx:for-index='first'>
+    <view class='title-small'>{{item.kind}}</view>
+    <view style='display:flex;flex-wrap:wrap;'>
+      <block wx:key="{{item}}" wx:for="{{item.content}}" wx:for-index='second'>
+        <view bindtap='clickItem' data-first='{{first}}' data-second='{{second}}' class="{{item.choose?'category-choose':'category-nochoose'}}">{{item.name}}</view>
+      </block>
+    </view>
+    <view class='line'></view>
+  </block>
+  <form bindsubmit='uploadInfo'>
+    <view>
+      <text class='title-small'>具体描述</text>
+      <textarea placeholder='比如生病多久了，有没有看过医生？' name="textarea" class='detail'></textarea>
+    </view>
+    <view class='btn-group'>
+        <button class='btn-cancel' bindtap='goBack'>取消</button>
+        <button class='btn-submit' form-type='submit'>确定</button>
+    </view>
+  </form>
+</view>
+

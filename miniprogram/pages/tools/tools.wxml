@@ -1,0 +1,21 @@
+<view style='background:#eee; padding-bottom:5rpx;padding-top:5rpx;'>
+  <block wx:key="{{item}}" wx:for="{{kinds}}" wx:key="name">
+    <view class='card'>
+      <view class='title'>{{item.name}}</view>
+      <view class='total'>
+        <block wx:key="{{item}}" wx:for="{{item.tools}}">
+          <view class='tool' bindtap='select' data-url='{{item.url}}'>
+            <image src='{{item.iconPath}}' class='icon'></image>
+            <view style='font-size: 30rpx;margin-top:30rpx;'>{{item.toolName}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 
+<view class="flex-wrp" style="flex-direction:row">
+     <view class="flex-item bc_green"></view>
+     <view class="flex-item bc_red"></view>
+     <view class="flex-item bc_blue"></view>
+</view> -->

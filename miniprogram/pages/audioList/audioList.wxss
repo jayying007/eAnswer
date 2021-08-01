@@ -1,0 +1,18 @@
+/* miniprogram/pages/audioList/audioList.wxss */
+.tip{
+  text-align: center;
+  background-color: #fff;
+  color: gray;
+  padding: 30rpx;
+  font-size: 28rpx;
+}
+.card{
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 30rpx 10rpx;
+}
+.nomore{
+  margin:50rpx 0px;
+  color:gray;
+  text-align:center;
+}

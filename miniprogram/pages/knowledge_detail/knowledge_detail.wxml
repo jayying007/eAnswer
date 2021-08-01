@@ -1,0 +1,26 @@
+<!--miniprogram/pages/knowledge_detail/knowledge_detail.wxml-->
+<view style='background-color:#eee'>
+  <!-- 处理原则 -->
+  <view class='card'>
+    <view class='title'>处理原则</view>
+    <view class='content'>{{principle}}</view>
+  </view>
+
+  <!-- 紧急处理 -->
+  <view class='card'>
+    <view class='title'>紧急处理</view>
+    <view class='content'>{{methods}}</view>
+  </view>
+
+  <!-- 注意事项 -->
+  <view class='card'>
+    <view class='title'>注意事项</view>
+    <view class='content'>{{notice}}</view>
+  </view>
+  
+  <!-- 防治 -->
+  <view class='card'>
+    <view class='title'>防治</view>
+    <view class='content'>{{prevent}}</view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!--miniprogram/pages/audio/audio.wxml-->
+
+<!-- 录音按钮 -->
+<view class='button-area'>
+  <button class='button-circle start' hidden="{{ishidden}}" bindtap='Start'>开始</button>
+   <button class='button-circle end' hidden='{{!ishidden}}' bindtap='Stop'>结束</button>
+  <button class='button-circle cancel' hidden='{{!ishidden}}' bindtap='Cancel'>取消</button>
+</view>
+
+<!-- 弹窗输入框 -->
+<view>
+  <modal title="输入文件名称" confirm-text="确定" cancel-text="关闭" hidden="{{mhidden}}" bindconfirm="changeModel" bindcancel="modalCancel">
+    <form bindsubmit='submit'>
+      <input name='mname' type='text' placeholder='请输入音频命名' bindinput="bindinput" value='{{filename}}'></input>
+    </form>
+  </modal>
+</view>
+

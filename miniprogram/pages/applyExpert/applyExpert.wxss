@@ -1,0 +1,33 @@
+/* pages/applyExpert/applyExpert.wxss */
+.background{
+  background-color:#eee;
+  padding-top: 40rpx;
+}
+.describe{
+  padding: 40rpx 30rpx;
+  color: gray;
+  background-color: #fff;
+  width: 100%;
+}
+.imgArea{
+  background-color: #fff;
+  padding: 30rpx 30rpx;
+  display: flex;
+}
+.imgBtn{
+  background-color: #eee;
+  height: 250rpx;
+  width: 250rpx;
+  text-align: center;
+  color: gray;
+}
+image{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 50rpx;
+}
+.btn-submit{
+  padding: 10rpx 60rpx;
+  border-radius: 30rpx;
+  background-color: #4fc3f7;
+}

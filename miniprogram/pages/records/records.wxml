@@ -1,0 +1,10 @@
+<!--miniprogram/pages/records/records.wxml-->
+<!-- 录音记录 -->
+<view class='tip'>长按删除</view>
+<view class="grace-list">
+  <block  wx:for="{{list}}" wx:key="{{item}}">
+    <view class='items' bindtap='play' data-item='{{item}}' bindlongpress='delete'>
+     <view class='title'>文件名：{{item.filename}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,10 @@
+<!--miniprogram/pages/knowledge/knowledge.wxml-->
+<view style='display:flex;flex-wrap:wrap;'>
+  <block wx:index="first" wx:for="{{advices}}">
+    <view  bindtap='detail' class='item' data-item='{{item}}'>
+        <image class='img' src='{{item.iconPath}}'></image>
+        <view>{{item.name}}</view>
+    </view> 
+  </block>
+</view>
+

@@ -1,0 +1,13 @@
+<!--pages/myAnswer/myAnswer.wxml-->
+<!-- 评论区 -->
+<view style='background-color:#ddd'>
+  <view class='tip'>长按删除  单击进入详情页</view>
+  <block wx:key="{{item}}" wx:for="{{comment}}">
+    <view class='card' bindlongpress='delete' data-index='{{index}}'>
+        <!-- 回复的内容 -->
+        <text style='font-weight:bold'>我的回复:</text> 
+        <view bindtap='detail' data-index='{{index}}'>{{item.content}}</view>
+    </view>
+  </block>
+</view>
+<view class='nomore'>没有更多内容了</view>

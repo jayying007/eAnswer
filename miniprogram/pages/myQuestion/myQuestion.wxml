@@ -1,0 +1,17 @@
+<!--pages/myQuestion/myQuestion.wxml-->
+<!-- 内容 -->
+<view style='background-color:#ddd'>
+  <view class='tip'>长按删除</view>
+  <block wx:key="{{item}}" wx:for="{{question}}">
+    <view class='card' bindlongpress='delete' bindtap='detail' data-item='{{item}}'>
+      <view style='display:flex'>
+        <text style='font-weight:bold'>关键词:</text>
+        <block wx:key="{{item}}" wx:for="{{item.keyword}}">
+            <view class="'bg-{{index}} bg">{{item}}</view>
+        </block>
+      </view>
+      <view class='content'>{{item.content}}</view>
+    </view>
+  </block>
+</view>
+<view class='nomore'>没有更多内容了</view>

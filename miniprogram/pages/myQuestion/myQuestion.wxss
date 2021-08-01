@@ -1,0 +1,55 @@
+/* pages/myQuestion/myQuestion.wxss */
+.tip{
+  text-align: center;
+  background-color: #fff;
+  color: gray;
+  padding: 30rpx;
+  font-size: 28rpx;
+} 
+.card{
+  background-color: #fff;
+  margin-top: 8px;
+  padding: 5px;
+}
+.bg{
+  border-radius: 10rpx;
+  padding: 0px 10rpx;
+}
+.bg-0{
+  background-color: #e1f5fe;
+  margin-left: 20rpx;
+}
+.bg-1{
+  background-color: #b3e5fc;
+  margin-left: 15rpx;
+}
+.bg-2{
+  background-color: #81d4fa;
+  margin-left: 15rpx;
+}
+.bg-3{
+  background-color: #80d8ff;
+  margin-left: 15rpx;
+}
+.bg-4{
+  background-color: #40c4ff;
+  margin-left: 15rpx;
+}
+.content{
+  font-family: cursive;
+  margin-top: 20rpx;
+  /* white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.nomore{
+  margin:50rpx 0px;
+  color:gray;
+  text-align:center;
+}

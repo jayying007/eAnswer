@@ -1,0 +1,14 @@
+<!--pages/feedback/feedback.wxml-->
+<view style='background-color:#eee;'>
+  <form bindsubmit='submit'>
+    <view>
+      <textarea bindinput='changeValue' name="describe" style='width:100%;padding:30rpx; background-color:#fff;' placeholder='反馈描述'></textarea>
+    </view>
+    <view style='margin-top:20rpx;margin-bottom:20rpx;'>
+      <input type='number' name="phone" style='padding-left:30rpx; height:100rpx; background-color:#fff;' placeholder='您的联系方式'></input>
+    </view>
+    <view>
+      <button form-type='submit' class='btn-submit' disabled='{{hasValue?false:true}}'>提交反馈</button>
+    </view> 
+  </form>
+</view>

@@ -1,0 +1,14 @@
+/* miniprogram/pages/knowledge/knowledge.wxss */
+.item{
+  width: 300rpx;
+  height: 350rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+
+  text-align: center;
+}
+.img{
+  width: 300rpx;
+  height: 300rpx;
+}

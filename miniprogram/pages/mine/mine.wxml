@@ -1,0 +1,22 @@
+<!--pages/index/jm.wxml-->
+<!-- 个人信息展示 -->
+<view class="info">
+  <view class='img'>
+    <open-data type='userAvatarUrl'></open-data>
+  </view>
+  <view class='name'>
+    <open-data type='userNickName'></open-data>
+  </view>
+</view>
+<!-- 功能模块展示 -->
+<view class="grace-list grace-common-mt">
+	<block wx:for="{{lists}}" wx:key="index">
+		<navigator class="items" url="{{item.path}}">
+      <view class="icons">
+				<image src="{{item.img}}" mode="widthFix"></image>
+			</view>
+			<view class="title">{{item.title}}<text>{{item.desc}}</text></view>
+      <view class="arrow-right"></view>
+		</navigator>
+	</block>
+</view>
